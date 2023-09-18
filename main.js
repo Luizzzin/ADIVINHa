@@ -1,6 +1,9 @@
 function start() {
     let ramdola = Math.floor(Math.random()* (100 - 1) - 1);
 
+    let certeza = document.getElementsByClassName(".resultado")
+    resultado.textContent = "SEU NUMERO FOI GERADO";
+
 
 }
 

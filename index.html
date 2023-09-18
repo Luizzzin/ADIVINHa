@@ -12,14 +12,49 @@
 <body>
     <div class="body">
         <div class="main">
-            <h1 class="controle">ADIVINHA O NUMERO</h1>
-            <button class="start" onclick="start()"><span id="">SORTEAR UM NUMBEROL</span></button>
-            <h1 id="palpite">ADICIONE O SEU PALPITE HAHAHAHA!</h1>
-            <button id="verificar" onclick="">VERIFICAR</button>
+            <h1 class="controle">
+                ADIVINHA O NUMERO
+            </h1>
+            <button class="start" onclick="start()">
+                <span id="">SORTEAR UM NÚMERO</span>
+            </button>
+            <h1 id="palpite">
+                ADICIONE O SEU PALPITE HAHAHAHA!
+            </h1>
+            <input type="number" id="numeroPalpite" placeholder="Insira seu palpite">
+            <button id="verificar" onclick="verificar()">
+                VERIFICAR
+            </button>
             <h1 class="resultado"></h1>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script>
+        let numerogeraldo;
+        let vidas = 10
+        function start() {
+            numerogeraldo = Math.floor(Math.random() * 100);
+            document.querySelector(".resultado").textContent = "Número gerado. Faça o seu palpite!";
+        }
+
+        function verificar() {
+            let resultado = document.querySelector(".resultado");
+            let palpite = parseInt(document.getElementById("numeroPalpite").value);
+
+            if (palpite === numerogeraldo) {
+                resultado.textContent = "ACERTOU!";
+            } else if (palpite < numerogeraldo) {
+                resultado.textContent = "O número é maior restam "+vidas;
+                vidas--;
+            } else {
+                resultado.textContent = "O número é menor restam "+vidas;
+                vidas--;
+            }
+            if(vidas == 0){
+                document.getElementById("verificar").disabled = true;
+                resultado.textContent = "O NUMERO ERA: "+numerogeraldo+" SEUS ANIMAIS";
+            }
+        }
+    </script>
 </body>
 
 </html>

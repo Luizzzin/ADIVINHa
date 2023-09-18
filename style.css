@@ -88,3 +88,8 @@
 #verificar:hover {
     background-color: gray;
 }
+#numeroPalpite{
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+}
