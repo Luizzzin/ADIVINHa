@@ -18,6 +18,10 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-image: url(WIN_20230918_15_09_30_Pro.jpg);
+    background-repeat: none;
+    /* background-attachment: local; */
+    background-size: cover;
 
 }
 
