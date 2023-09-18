@@ -1,25 +1,27 @@
-*{
+* {
     border: 0;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --white: #fff;
     --green: #32fc5a;
     --red: #ff0000;
 }
-.body{
+
+.body {
     background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    
+
 }
 
-.main{
+.main {
     width: 700px;
     height: 500px;
     background-color: rgb(33, 33, 33);
@@ -30,41 +32,59 @@
     display: flex;
     flex-direction: column;
     transition: 0.3s ease;
-    
+
 
 }
-.controle{
+
+.controle {
     font: 400 30px 'esquadro';
     color: white;
 }
+
 @font-face {
     font-family: 'esquadro';
     src: url(eEsquadro.ttf);
 }
-.start{
+
+.start {
     width: 200px;
     height: 50px;
     border-radius: 5px;
     margin-top: 30px;
     transition: 0.3s ease;
 }
-.start:hover{
+
+.start:hover {
     background-color: gray;
 }
-.resultado{
+
+.resultado {
     font: 400 24px 'esquadro';
     margin-top: 30px;
     color: var(--white)
 }
 
-#adivinho{
+#adivinho {
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+#palpite {
+    font-size: 15px;
+    margin-top: 50px;
+    color: white;
+}
+
+#verificar {
     margin-top: 20px;
     width: 200px;
     height: 30px;
     border-radius: 5px;
+    transition: 0.3s ease;
 }
-#palpite{
-    font-size: 15px;
-    margin-top: 50px;
-    color: white;
+
+#verificar:hover {
+    background-color: gray;
 }
